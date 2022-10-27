@@ -1,10 +1,21 @@
 // Components
 import Head from 'next/head'; 
 import Navbar from '../components/Navbar';
+import Modal from '../components/Modal';
+
+// Hooks
+import { createContext, useState } from 'react';
+
+// Context
+export const Context = createContext();
 
 export default function Home() {
+  
+  // State
+  const [modal, setModal] = useState(false);
+  
   return (
-    <div>
+    <Context.Provider value={{ modal, setModal }}>
       <Head>
         <meta charSet='utf-8' />
         <meta name="description" content="Personal portfolio for Boris Shvidchenko." />
@@ -15,7 +26,8 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
+        {modal && <Modal />}
       </main>
-    </div>
+    </Context.Provider>
   )
 }

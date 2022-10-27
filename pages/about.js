@@ -1,5 +1,10 @@
+import Navbar from '../components/Navbar';
+
 export default function About() {
     return(
-        <div>About Page</div>
+        <div>
+            <Navbar />
+            About Page
+        </div>
     )
 }
