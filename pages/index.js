@@ -1,6 +1,7 @@
 // Components
 import Navbar from '../components/Navbar';
 import Modal from '../components/Modal';
+import Bio from '../components/Bio';
 
 // Context
 import { Context } from './_app';
@@ -15,10 +16,12 @@ export default function Home() {
   
   return (
     <main>
-      <div>
-        <Navbar />
-        {modal && <Modal />}
-      </div>
+      <Navbar />
+      {modal && <Modal />}
+      <Bio />
+
+      {/* Import Projects and Contact (1 container component for project + contact pages ) Components here for mobile */}
+
     </main>
   )
 }
