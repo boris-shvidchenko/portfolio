@@ -14,9 +14,10 @@ export default function MyApp({ Component, pageProps }) {
   
   // State
   const [modal, setModal] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   return (
-    <Context.Provider value={{ modal, setModal }}>
+    <Context.Provider value={{ modal, setModal, darkTheme, setDarkTheme }}>
       <Head>
         <meta charSet='utf-8' />
         <meta name="description" content="Personal portfolio for Boris Shvidchenko." />
