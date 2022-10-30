@@ -22,9 +22,9 @@ export default function Navbar() {
     };
 
     return(
-        <nav className='flex justify-between px-20 xl:px-32 2xl:px-40 py-9 items-center sticky top-0 bg-white z-1 border-b border-b-stone-200 md:border-none'>
-            <h1 className='text-3xl'>Boris Shvidchenko</h1>
-            <div className='hidden space-x-10 mt-1 items-center md:flex'>
+        <nav className='flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-9 items-center sticky top-0 bg-white z-10 border-b border-b-stone-200 md:border-none'>
+            <h1 className='font-semibold text-3xl lg:text-4xl'>Boris Shvidchenko</h1>
+            <div className='hidden md:space-x-8 lg:space-x-10 mt-1 items-center md:flex'>
                 <Link href='/'><p className='text-lg lg:text-xl'>Home</p></Link>
                 <Link href='/projects'><p className='text-lg lg:text-xl'>Projects</p></Link>
                 <Link href='/contact'><p className='text-lg lg:text-xl'>Contact</p></Link>

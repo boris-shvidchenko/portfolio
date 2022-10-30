@@ -23,7 +23,7 @@ export default function Modal() {
     };
 
     return (
-        <nav className='flex flex-col pt-52 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80'>
+        <nav className='flex flex-col pt-52 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80 z-20'>
             <XMarkIcon className='icons fixed top-10 right-20' onClick={closeModal} />
             <Link href='/' onClick={closeModal}><p className='text-4xl'>Home</p></Link>
             <Link href='/projects' onClick={closeModal}><p className='text-4xl'>Projects</p></Link>
