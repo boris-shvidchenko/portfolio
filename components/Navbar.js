@@ -22,7 +22,7 @@ export default function Navbar() {
     };
 
     return(
-        <nav className='flex justify-between px-20 py-9 items-center sticky top-0 bg-white z-1 border-b border-b-stone-200 md:border-none'>
+        <nav className='flex justify-between px-20 xl:px-32 2xl:px-40 py-9 items-center sticky top-0 bg-white z-1 border-b border-b-stone-200 md:border-none'>
             <h1 className='text-3xl'>Boris Shvidchenko</h1>
             <div className='hidden space-x-10 mt-1 items-center md:flex'>
                 <Link href='/'><p className='text-lg lg:text-xl'>Home</p></Link>
