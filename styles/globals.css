@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+body {
+    font-family: 'Open Sans', sans-serif
+}
+
 @layer components {
     
     /* Icons class used for all Heroicons */
     .icons {
         @apply h-8 w-8 cursor-pointer
+    }
+
+    /* Used to highlight navigation text on hover */
+    .onhover {
+        @apply hover:font-semibold 
+    }
+
+    /* Used to highlight social links on hover */
+    .onhover-social {
+        @apply hover:outline outline-offset-0 outline-1 
     }
 }

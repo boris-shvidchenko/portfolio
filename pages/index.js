@@ -12,10 +12,10 @@ import { useContext } from 'react';
 export default function Home() {
 
   // Access the application states
-  const { modal } = useContext(Context);
+  const { modal, darkTheme } = useContext(Context);
   
   return (
-    <main>
+    <main className={` ${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'} `}>
       <Navbar />
       {modal && <Modal />}
       <Bio />
