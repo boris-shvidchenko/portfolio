@@ -13,18 +13,16 @@ import { useContext } from 'react';
 export default function Projects() {
 
     // Access the application states
-    const { modal } = useContext(Context);
+    const { modal, darkTheme } = useContext(Context);
 
     return(
-        <div>
+        <main className={` ${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
             <Head>
                 <title>Boris Shvidchenko - Projects</title>
             </Head>
-            <main>
-                <Navbar />
-                {modal && <Modal />}
-                <ProjectContainer />
-            </main>
-        </div>
+            <Navbar />
+            {modal && <Modal />}
+            <ProjectContainer />
+        </main>
     )
 }

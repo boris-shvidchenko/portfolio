@@ -23,4 +23,9 @@ body {
     .onhover-social {
         @apply hover:outline outline-offset-0 outline-1 
     }
+
+    /* Used to resize the individual project images used in the projects page */
+    .project-image {
+        @apply w-full
+    }
 }
