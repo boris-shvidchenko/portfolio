@@ -25,14 +25,17 @@ export default function Project({ id, title, summary, img, url }) {
     }
 
     return (
-        <div className='border border-black p-2'>
-            <p>{title}</p>
-            <p>{summary}</p>
-            <img src={img} className='project-image'/>
-            <Link href={url} target='_blank'>Visit</Link>
-            <div onClick={seeMoreInfo} className='flex items-center cursor-pointer onhover'>
-                <p className='text-lg'>More info</p>
-                <ChevronRightIcon className='h-5 w-5 pt-1'/>
+        <div className={`max-w-96 p-3 ${darkTheme ? 'border' : ''} border-[#4e4e4e] ${darkTheme ? 'bg-[#272727]' : 'bg-[#efefef]'} rounded-md ${darkTheme ? 'text-white' : 'text-black'}`}>
+            <p className='mb-2 text-lg font-semibold'>{title}</p>
+            <div className='overflow-hidden'> 
+                <Link href={url} target='_blank'><img src={img} className='project-image rounded-sm hover:scale-105 duration-300'/></Link>
+            </div>
+            <div onClick={seeMoreInfo} className='flex items-center justify-between mt-2'>
+                <p>{summary}</p>
+                <div className='flex items-center cursor-pointer onhover'>
+                    <p className='italic'>More info</p>
+                    <ChevronRightIcon className='h-4 w-4 pt-1'/>
+                </div>
             </div>
         </div>
     )

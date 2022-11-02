@@ -26,6 +26,6 @@ body {
 
     /* Used to resize the individual project images used in the projects page */
     .project-image {
-        @apply w-full
+        @apply w-full h-96 object-cover object-top
     }
 }

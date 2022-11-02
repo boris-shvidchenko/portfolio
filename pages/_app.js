@@ -2,7 +2,7 @@
 import Head from 'next/head'; 
 
 // Hooks
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 // Styles
 import '../styles/globals.css';
@@ -15,9 +15,24 @@ export default function MyApp({ Component, pageProps }) {
   // State
   const [modal, setModal] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
+  const [mobileView, setMobileView] = useState({width: 'undefined'});
+
+  // Sets the mobileView state width property to the current browser width. This is used in order to render components based on where mobile view is used or not
+  // The code in the useEffect hook was referenced from the following source: https://stackoverflow.com/questions/63406435/how-to-detect-window-size-in-next-js-ssr-using-react-hook
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      function handleResize() {
+        setMobileView({
+          width: window.innerWidth
+        });
+      }
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []); 
 
   return (
-    <Context.Provider value={{ modal, setModal, darkTheme, setDarkTheme }}>
+    <Context.Provider value={{ modal, setModal, darkTheme, setDarkTheme, mobileView }}>
       <Head>
         <meta charSet='utf-8' />
         <meta name="description" content="Personal portfolio for Boris Shvidchenko." />
