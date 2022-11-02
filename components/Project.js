@@ -11,17 +11,25 @@ import { useRouter } from 'next/router';
 // Context
 import { Context } from '../pages/_app';
 
-export default function Project({ id, title, summary, img, url }) {
+export default function Project({ id, title, summary, description, img, url }) {
 
     // Access the application states
-    const { darkTheme } = useContext(Context);
+    const { darkTheme, setProjectData } = useContext(Context);
 
     // Create a router to access project details page
     const router = useRouter();
 
     // Function will push to specified path when 'More Info' is clicked
     function seeMoreInfo() {
-        router.push(`/projects/${id}`)
+        setProjectData(
+            {
+                id: id,
+                title: title,
+                description: description,
+                img: img,
+                url: url
+            });
+        router.push(`/projects/${id}`);
     }
 
     return (
@@ -30,9 +38,9 @@ export default function Project({ id, title, summary, img, url }) {
             <div className='overflow-hidden'> 
                 <Link href={url} target='_blank'><img src={img} className='project-image rounded-sm hover:scale-105 duration-300'/></Link>
             </div>
-            <div onClick={seeMoreInfo} className='flex items-center justify-between mt-2'>
+            <div className='flex items-center justify-between mt-2'>
                 <p>{summary}</p>
-                <div className='flex items-center cursor-pointer onhover'>
+                <div onClick={seeMoreInfo} className='flex items-center cursor-pointer onhover'>
                     <p className='italic'>More info</p>
                     <ChevronRightIcon className='h-4 w-4 pt-1'/>
                 </div>
