@@ -1,7 +1,7 @@
 // Array will store individual project information for the projects page 
 export const projectData = [
     {
-        id: '1',
+        id: 'hulu-clone',
         key: '1a',
         title: 'Hulu Clone',
         summary: 'A clone of Hulu',
@@ -10,7 +10,7 @@ export const projectData = [
         url: 'https://hulu-clone-gules-one.vercel.app/'
     },
     {
-        id: '2',
+        id: 'hulu-clone2',
         key: '2a',
         title: 'Hulu Clone',
         summary: 'A clone of Hulu',
@@ -19,7 +19,7 @@ export const projectData = [
         url: 'https://hulu-clone-gules-one.vercel.app/'
     },
     {
-        id: '3',
+        id: 'hulu-clone3',
         key: '3a',
         title: 'Hulu Clone',
         summary: 'A clone of Hulu',
@@ -28,7 +28,7 @@ export const projectData = [
         url: 'https://hulu-clone-gules-one.vercel.app/'
     },
     {
-        id: '4',
+        id: 'hulu-clone4',
         key: '4a',
         title: 'Hulu Clone',
         summary: 'A clone of Hulu',
