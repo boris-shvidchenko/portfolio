@@ -27,7 +27,7 @@ export default function Navbar() {
     }
 
     return(
-        <nav className={`flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-9 items-center sticky top-0 ${darkTheme ? 'text-white' : 'text-black'} ${darkTheme ? 'bg-[#424141]' : 'bg-[#efefef]'} z-10`}>
+        <nav className={` bg-[#272727] flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-9 items-center sticky top-0 ${darkTheme ? 'text-white' : 'text-black'} ${darkTheme ? 'md:bg-[#424141]' : 'bg-[#efefef]'} z-10`}>
             <h1 className='font-semibold text-3xl lg:text-4xl'>Boris Shvidchenko</h1>
             <div className='hidden md:space-x-8 lg:space-x-10 mt-1 items-center md:flex'>
                 <Link href='/'><p className='text-lg lg:text-xl onhover'>Home</p></Link>
