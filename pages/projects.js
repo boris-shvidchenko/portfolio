@@ -2,7 +2,7 @@
 import Head from 'next/head'; 
 import Navbar from '../components/Navbar';
 import Modal from '../components/Modal';
-import Projects from '../components/Projects';
+import ProjectContainer from '../components/ProjectContainer';
 
 // Context
 import { Context } from './_app';
@@ -23,7 +23,7 @@ export default function Projects() {
             <main>
                 <Navbar />
                 {modal && <Modal />}
-                <Projects />
+                <ProjectContainer />
             </main>
         </div>
     )
