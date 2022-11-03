@@ -28,6 +28,7 @@ export default function MyApp({ Component, pageProps }) {
         });
       }
       window.addEventListener('resize', handleResize);
+      handleResize();
       return () => window.removeEventListener('resize', handleResize);
     }
   }, []); 
