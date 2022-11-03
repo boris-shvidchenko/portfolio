@@ -2,6 +2,7 @@
 import Head from 'next/head'; 
 import Navbar from '../../components/Navbar';
 import Modal from '../../components/Modal';
+import ProjectDetails from '../../components/ProjectDetails';
 
 // Context
 import { Context } from '../_app';
@@ -20,11 +21,7 @@ export default function ProjectInfo() {
                 <title>{`Boris Shvidchenko - ${projectData?.title}`}</title>
             </Head>
             <Navbar />
-            <p>{projectData?.id}</p>
-            <p>{projectData?.title}</p>
-            <p>{projectData?.description}</p>
-            <img src={projectData?.img}></img>
-            <p>{projectData?.url}</p>
+            <ProjectDetails />
             {modal && <Modal />}
 
         </main>
