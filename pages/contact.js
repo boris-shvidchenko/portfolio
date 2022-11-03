@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Modal from '../components/Modal';
 import Bio from '../components/Bio';
+import ProjectContainer from '../components/ProjectContainer';
+import ContactContainer from '../components/ContactContainer';
 
 // Context
 import { Context } from './_app';
@@ -25,8 +27,7 @@ export default function Contact() {
                 {modal && <Modal />}
                 {mobileView.width <= 768 && <Bio />}
                 {mobileView.width <= 768 && <ProjectContainer />}
-                Contact Page
-                {/* Contact Component */}
+                <ContactContainer />
             </main>
         </div>
     )
