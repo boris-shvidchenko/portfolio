@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Modal from '../components/Modal';
 import Bio from '../components/Bio';
 import ProjectContainer from '../components/ProjectContainer';
+import ContactContainer from '../components/ContactContainer';
 
 // Context
 import { Context } from './_app';
@@ -26,6 +27,7 @@ export default function Projects() {
             {modal && <Modal />}
             {mobileView.width <= 768 && <Bio />}
             <ProjectContainer />
+            {mobileView.width <= 768 && <ContactContainer />}
         </main>
     )
 }
