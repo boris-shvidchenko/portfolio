@@ -23,7 +23,6 @@ export default function ProjectInfo() {
             <Navbar />
             <ProjectDetails />
             {modal && <Modal />}
-
         </main>
     )
 }

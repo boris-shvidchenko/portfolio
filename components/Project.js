@@ -36,7 +36,7 @@ export default function Project({ id, title, summary, description, img, url }) {
         <div className={`max-w-96 p-3 ${darkTheme ? 'border' : ''} border-[#4e4e4e] ${darkTheme ? 'bg-[#272727]' : 'bg-[#efefef]'} rounded-md ${darkTheme ? 'text-white' : 'text-black'}`}>
             <p className='mb-2 text-lg font-semibold'>{title}</p>
             <div className='overflow-hidden'> 
-                <Link href={url} target='_blank'><img src={img} className='project-image rounded-sm hover:scale-105 duration-300'/></Link>
+                <Link href={url} target='_blank'><img src={img} alt={`Example image of the ${title} build`} className='project-image rounded-sm hover:scale-105 duration-300'/></Link>
             </div>
             <div className='flex items-center justify-between mt-2'>
                 <p>{summary}</p>
