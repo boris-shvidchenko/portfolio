@@ -2,6 +2,7 @@
 import Head from 'next/head'; 
 import Navbar from '../components/Navbar';
 import Modal from '../components/Modal';
+import Bio from '../components/Bio';
 
 // Context
 import { Context } from './_app';
@@ -12,7 +13,7 @@ import { useContext } from 'react';
 export default function Contact() {
 
     // Access the application states
-    const { modal } = useContext(Context);
+    const { modal, darkTheme, mobileView } = useContext(Context);
 
     return(
         <div>
@@ -22,7 +23,10 @@ export default function Contact() {
             <main>
                 <Navbar />
                 {modal && <Modal />}
+                {mobileView.width <= 768 && <Bio />}
+                {mobileView.width <= 768 && <ProjectContainer />}
                 Contact Page
+                {/* Contact Component */}
             </main>
         </div>
     )

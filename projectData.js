@@ -3,7 +3,7 @@ export const projectData = [
     {
         id: 'hulu-clone',
         key: '1a',
-        title: 'Hulu Clone',
+        title: 'Hulu Clone 1',
         summary: 'A clone of Hulu.',
         description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
         img: '../images/project-images/hulu-img2.png',
@@ -12,7 +12,7 @@ export const projectData = [
     {
         id: 'hulu-clone2',
         key: '2a',
-        title: 'Hulu Clone',
+        title: 'Hulu Clone 2',
         summary: 'A clone of Hulu.',
         description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
         img: '../images/project-images/hulu-img2.png',
@@ -21,7 +21,7 @@ export const projectData = [
     {
         id: 'hulu-clone3',
         key: '3a',
-        title: 'Hulu Clone',
+        title: 'Hulu Clone 3',
         summary: 'A clone of Hulu.',
         description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
         img: '../images/project-images/hulu-img2.png',
@@ -30,7 +30,7 @@ export const projectData = [
     {
         id: 'hulu-clone4',
         key: '4a',
-        title: 'Hulu Clone',
+        title: 'Hulu Clone 4',
         summary: 'A clone of Hulu.',
         description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
         img: '../images/project-images/hulu-img2.png',

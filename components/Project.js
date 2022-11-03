@@ -11,24 +11,16 @@ import { useRouter } from 'next/router';
 // Context
 import { Context } from '../pages/_app';
 
-export default function Project({ id, title, summary, description, img, url }) {
+export default function Project({ id, title, summary, img, url }) {
 
     // Access the application states
-    const { darkTheme, setProjectData } = useContext(Context);
+    const { darkTheme } = useContext(Context);
 
     // Create a router to access project details page
     const router = useRouter();
 
     // Function will push to specified path when 'More Info' is clicked
     function seeMoreInfo() {
-        setProjectData(
-            {
-                id: id,
-                title: title,
-                description: description,
-                img: img,
-                url: url
-            });
         router.push(`/projects/${id}`);
     }
 
