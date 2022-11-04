@@ -28,4 +28,8 @@ body {
     .project-image {
         @apply w-full h-96 object-cover object-top
     }
+
+    .form {
+        @apply flex flex-col
+    }
 }
