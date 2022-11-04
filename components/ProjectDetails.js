@@ -22,7 +22,7 @@ export default function ProjectDetails({ data }) {
                 <Link 
                     href={data?.url} 
                     target='_blank' 
-                    className={`w-28 mt-5 sm:left-0 sm:static flex space-x-2 rounded-md md:border ${darkTheme ? 'md:border-none' : 'md:border-black'} p-2 ${darkTheme ? 'bg-[#424141]' : 'bg-gray-400'} ${darkTheme ? 'md:bg-[#424141]' : 'md:bg-[#d7dee1]'} min-w-fit onhover-social`}
+                    className={`w-28 mt-5 sm:left-0 sm:static flex space-x-2 rounded-md md:border ${darkTheme ? 'md:border-none' : 'md:border-black'} p-2 ${darkTheme ? 'bg-[#424141]' : 'bg-gray-400'} ${darkTheme ? 'md:bg-[#424141]' : 'md:bg-[#d7dee1]'} min-w-fit onhover-social onhover`}
                     >
                     <p>Check out the build</p>
                 </Link>

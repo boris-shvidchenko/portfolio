@@ -22,7 +22,7 @@ export default function Contact() {
             <Head>
                 <title>Boris Shvidchenko - Contact</title>
             </Head>
-            <main>
+            <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
                 <Navbar />
                 {modal && <Modal />}
                 {mobileView.width <= 768 && <Bio />}
