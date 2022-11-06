@@ -5,9 +5,15 @@
 /* Fonts */
 body {
     font-family: 'Open Sans', sans-serif
+    /* font-family: 'Manrope', sans-serif; */
 }
 
 @layer components {
+
+    /* Font used for navbar and modal text */
+    .headers {
+        font-family: 'Manrope', sans-serif;
+    }
     
     /* Icons class used for all Heroicons */
     .icons {
@@ -34,6 +40,6 @@ body {
     }
 
     .form-input {
-        @apply rounded-sm
+        @apply rounded-sm border border-gray-300
     }
 }
