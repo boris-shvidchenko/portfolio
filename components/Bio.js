@@ -13,7 +13,7 @@ export default function Bio() {
     const { darkTheme } = useContext(Context);
 
     return (
-        <main className='md:px-20 xl:px-32 2xl:px-40 md:h-[calc(100vh-140px)] lg:h-[calc(100vh-144px)]'>
+        <main className='md:px-20 xl:px-32 2xl:px-40 md:h-[calc(100vh-108px)] lg:h-[calc(100vh-112px)]'>
             <section className='md:flex md:space-x-6 lg:space-x-10 md:mt-8'>
                 <img src='../images/profile-picture.png' alt='Profile picture' className='w-screen md:w-80 h-full lg:w-[450px] md:mt-2 md:rounded-sm' />
                 <div className={`bg-gradient-to-b from-black/70 md:bg-none text-white ${darkTheme ? 'md:text-[#efefef]' : 'md:text-black'} pt-32 md:pt-0 pb-8 md:pb-0 absolute top-0 px-7 md:px-none md:relative md:top-0`}>
