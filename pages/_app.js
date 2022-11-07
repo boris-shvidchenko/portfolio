@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
   const [modal, setModal] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
   const [mobileView, setMobileView] = useState({width: 'undefined'});
-  const [formData, setFormData] = useState({fullName: '', email: '', message: ''});
+  const [formData, setFormData] = useState({fullName: '', email: '', subject: '', message: ''});
   const [confirmFormData, setConfirmFormData] = useState(true);
 
   // Sets the mobileView state width property to the current browser width. This is used in order to render components based on where mobile view is used or not
