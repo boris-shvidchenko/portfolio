@@ -13,7 +13,7 @@ export default function ContactContainer() {
     const emailVerification = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email);
 
     // Updates form data state when input fields are changed by user
-    function changeFormData(event) {
+    function updateFormData(event) {
         setFormData((prevFormData) => {
             return {
                 ...prevFormData,
@@ -21,14 +21,31 @@ export default function ContactContainer() {
             }
         })
     }
-
+    console.log(formData)
     // Submit form after validating data
     function submitForm(event) {
         event.preventDefault();
         // Validate form completion and email format. Email validation code referenced from 'https://www.w3resource.com/javascript/form/email-validation.php'
         if (formData.fullName && formData.email && formData.message && emailVerification) {
             setConfirmFormData(true);
-            // Add form functionality here ... 
+            // Add form functionality here ...
+            console.log('Sending') 
+            let data = formData;
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                  'Accept': 'application/json, text/plain, */*',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+              }).then((res) => {
+                console.log('Response received');
+                if (res.status === 200) {
+                console.log('Response succeeded!');
+                setFormData({fullName: '', email: '', subject: '', message: ''});
+                setConfirmFormData(false);
+                }
+              })
             // Once data has been submitted, clear values
         } else {
             setConfirmFormData(false);
@@ -43,36 +60,36 @@ export default function ContactContainer() {
                 <p>Reach out by sending me a message. I'll get back to you as soon as I can.</p>
             </section>
             
-            <form className={`form ${darkTheme ? 'border' : ''} shadow-md border-[#4e4e4e] md:w-[525px] p-3 rounded-md ${darkTheme ? 'bg-[#272727]' : 'bg-[#efefef]'}`}>
+            <form onSubmit={(e) => submitForm(e)} className={`form ${darkTheme ? 'border' : ''} shadow-md border-[#4e4e4e] md:w-[525px] p-3 rounded-md ${darkTheme ? 'bg-[#272727]' : 'bg-[#efefef]'}`}>
 
                 {/* Name */}
                 <section className='form'>
                     <label htmlFor='fullName'>Full Name <span className={`${!formData.fullName ? 'text-red-500' : 'hidden'}`}>*</span></label>
-                    <input type='text' id='fullName' name='fullName' value={formData.fullName} required onChange={changeFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
+                    <input type='text' id='fullName' name='fullName' value={formData.fullName} required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
                 </section>
 
                 {/* Email address */}
                 <section className='form'>
                     <label htmlFor='email'>Email <span className={`${!formData.email || !emailVerification ? 'text-red-500' : 'hidden'}`}>*</span></label>  
-                    <input type='email' id='email' name='email' required onChange={changeFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
+                    <input type='email' id='email' name='email' required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
                 </section>
 
                 {/* Subject */}
                 <section className='form'>
                     <label htmlFor='subject'>Subject <span className={`${!formData.subject ? 'text-red-500' : 'hidden'}`}>*</span></label>
-                    <input type='text' id='subject' name='subject' value={formData.subject} required onChange={changeFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
+                    <input type='text' id='subject' name='subject' value={formData.subject} required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
                 </section>
 
                 {/* Message */}
                 <section className='form pb-5'>
                     <label htmlFor='message'>Message <span className={`${!formData.message ? 'text-red-500' : 'hidden'}`}>*</span></label>  
-                    <textarea id='message' name='message' rows='4' cols='40' required onChange={changeFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}/>
+                    <textarea id='message' name='message' rows='4' cols='40' required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}/>
                 </section> 
 
                 {/* Submit button and error message */}
-                <input type='submit' value='Submit' onClick={submitForm} className={`font-semibold w-28 rounded-md p-1 ${darkTheme ? 'bg-[#424141]' : 'bg-gray-400'} ${darkTheme ? 'md:bg-[#424141]' : ''} min-w-fit onhover-social onhover`} />
+                <button type='submit' className={`font-semibold w-28 rounded-md p-1 ${darkTheme ? 'bg-[#424141]' : 'bg-gray-400'} ${darkTheme ? 'md:bg-[#424141]' : ''} min-w-fit onhover-social onhover`}>Submit</button>
 
-                <p className={`${!confirmFormData ? 'text-red-500' : 'hidden'} pt-3 text-sm`}>Please fill out the required fields and/or make sure your email is correct.</p>
+                <p className={`${!confirmFormData ? 'text-red-500' : 'hidden'} pt-3 text-sm`}>Please make sure your email is correct.</p>
 
             </form>
         </main>
