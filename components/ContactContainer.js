@@ -21,17 +21,18 @@ export default function ContactContainer() {
             }
         })
     }
-    console.log(formData)
+
     // Submit form after validating data
     function submitForm(event) {
         event.preventDefault();
         // Validate form completion and email format. Email validation code referenced from 'https://www.w3resource.com/javascript/form/email-validation.php'
         if (formData.fullName && formData.email && formData.message && emailVerification) {
             setConfirmFormData(true);
-            // Add form functionality here ...
             console.log('Sending') 
+            // Store form data in 'data', this variable will be used during the message submission process
             let data = formData;
-            fetch('/api/contact', {
+            // Fetch the custom API (submitMessage.js). Set the method, headers, and body to the form data
+            fetch('/api/submitMessage', {
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json, text/plain, */*',
@@ -41,12 +42,14 @@ export default function ContactContainer() {
               }).then((res) => {
                 console.log('Response received');
                 if (res.status === 200) {
-                console.log('Response succeeded!');
-                setFormData({fullName: '', email: '', subject: '', message: ''});
-                setConfirmFormData(false);
+                    console.log('Response succeeded!');
+                    // Once submission is completed, return form data state and confirm form data state to default values, this will remove the text from the input fields in the form
+                    setFormData(() => {
+                        return {fullName: '', email: '', message: ''}
+                    });
+                    setConfirmFormData(true);
                 }
               })
-            // Once data has been submitted, clear values
         } else {
             setConfirmFormData(false);
         }
@@ -72,12 +75,6 @@ export default function ContactContainer() {
                 <section className='form'>
                     <label htmlFor='email'>Email <span className={`${!formData.email || !emailVerification ? 'text-red-500' : 'hidden'}`}>*</span></label>  
                     <input type='email' id='email' name='email' required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
-                </section>
-
-                {/* Subject */}
-                <section className='form'>
-                    <label htmlFor='subject'>Subject <span className={`${!formData.subject ? 'text-red-500' : 'hidden'}`}>*</span></label>
-                    <input type='text' id='subject' name='subject' value={formData.subject} required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
                 </section>
 
                 {/* Message */}
