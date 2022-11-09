@@ -7,13 +7,14 @@ import { Context } from '../pages/_app';
 export default function ContactContainer() {
 
     // Access the application states
-    const { darkTheme, formData, setFormData, confirmFormData, setConfirmFormData } = useContext(Context);
+    const { darkTheme, formData, setFormData, confirmFormData, setConfirmFormData, messageSent, setMessageSent } = useContext(Context);
 
     // Boolean variable to validate email format with regex. Code referenced from 'https://www.w3resource.com/javascript/form/email-validation.php'
     const emailVerification = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email);
 
     // Updates form data state when input fields are changed by user
     function updateFormData(event) {
+        setConfirmFormData(true);
         setFormData((prevFormData) => {
             return {
                 ...prevFormData,
@@ -27,7 +28,6 @@ export default function ContactContainer() {
         event.preventDefault();
         // Validate form completion and email format. 
         if (formData.fullName && formData.email && formData.message && emailVerification) {
-            setConfirmFormData(true);
             console.log('Sending') 
             // Store form data in 'data', this variable will be used during the message submission process
             let data = formData;
@@ -40,14 +40,18 @@ export default function ContactContainer() {
                 },
                 body: JSON.stringify(data)
               }).then((res) => {
+                // Tell user that the message has been sent. Remove message after 8 seconds.
+                setMessageSent('Message Sent!');
+                setTimeout(() => {
+                    setMessageSent('');
+                }, 8000)
                 console.log('Response received');
                 if (res.status === 200) {
                     console.log('Response succeeded!');
-                    // Once submission is completed, return form data state and confirm form data state to default values, this will remove the text from the input fields in the form
+                    // Once submission is completed, return form data state to default, this will remove the text from the input fields in the form
                     setFormData(() => {
                         return {fullName: '', email: '', message: ''}
                     });
-                    // setConfirmFormData(true);
                 }
               })
         } else {
@@ -83,10 +87,12 @@ export default function ContactContainer() {
                     <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}/>
                 </section> 
 
-                {/* Submit button and error message */}
-                <button type='submit' className={`font-semibold w-28 rounded-md p-1 ${darkTheme ? 'bg-[#424141]' : 'bg-gray-400'} ${darkTheme ? 'md:bg-[#424141]' : ''} min-w-fit onhover-social onhover`}>Submit</button>
-
-                <p className={`${!confirmFormData ? 'text-red-500' : 'hidden'} pt-3 text-sm`}>Please make sure your email is correct.</p>
+                {/* Submit button, error message, and successful submission message */}
+                <section className='flex items-center'>
+                    <button type='submit' className={`font-semibold w-28 rounded-md p-1 ${darkTheme ? 'bg-[#424141]' : 'bg-gray-400'} ${darkTheme ? 'md:bg-[#424141]' : ''} min-w-fit onhover-social onhover`}>Submit</button>
+                    <p className={`ml-10 text-sm ${!confirmFormData ? 'text-red-500' : 'hidden'}`}>Please make sure your email is correct.</p>
+                    <p className='ml-10'>{messageSent}</p>
+                </section>
 
             </form>
         </main>
