@@ -18,15 +18,8 @@ export default function ProjectContainer() {
     // Project data array will be mapped and an individual Project component will be returned
     const projectComponents = projectData.map((project) => {
         return (
-            <Project 
-                id={project.id}
-                key={project.key}
-                title={project.title}
-                summary={project.summary}
-                description={project.description}
-                img={project.img}
-                url={project.url}
-            />
+            // Note: {...project} passes all project propertires as props to be destructured in Project component
+            <Project {...project} />
         )
     });
 

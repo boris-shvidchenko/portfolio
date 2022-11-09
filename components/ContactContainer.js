@@ -84,7 +84,13 @@ export default function ContactContainer() {
                 {/* Message */}
                 <section className='form pb-5'>
                     <label htmlFor='message'>Message <span className={`${!formData.message ? 'text-red-500' : 'hidden'}`}>*</span></label>  
-                    <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}/>
+
+                    <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} 
+                    
+                    className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}
+                    
+                    />
+
                 </section> 
 
                 {/* Submit button, error message, and successful submission message */}

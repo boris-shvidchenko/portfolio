@@ -16,7 +16,7 @@ export default function Contact() {
 
     // Access the application states
     const { modal, darkTheme, mobileView } = useContext(Context);
-
+  
     return(
         <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
                 <Head>
