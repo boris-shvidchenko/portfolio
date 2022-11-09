@@ -1,5 +1,6 @@
 // Components
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Heroicons
 import { SunIcon } from '@heroicons/react/24/outline';
@@ -28,8 +29,11 @@ export default function Navbar() {
 
     return(
         <nav className={`${darkTheme ? 'border-b shadow-md border-b-[#1a1a1a] md:border-none' : 'border-b shadow-md border-b-[#cacaca] md:border-none'} bg-[#272727] flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 ${darkTheme ? 'text-white' : 'text-black'} ${darkTheme ? 'md:bg-[#424141]' : 'bg-[#ffffff]'} z-10 headers`}>
-            <Link href='/'><p className='font-semibold text-3xl lg:text-4xl'>Boris Shvidchenko</p></Link>
-            <div className='hidden md:space-x-8 lg:space-x-10 mt-1 items-center md:flex'>
+            <div className='flex items-center space-x-6 lg:space-x-8'>
+                <Image src={darkTheme ? '/images/profile-logo-dark.png' : '/images/profile-logo-light.png'} width={40} height={40} alt='Profile logo' />
+                <Link href='/'><p className='font-semibold text-2xl lg:text-4xl'>Boris Shvidchenko</p></Link>
+            </div>
+            <div className='hidden md:space-x-6 lg:space-x-10 mt-1 items-center md:flex'>
                 <Link href='/'><p className='text-lg lg:text-xl onhover'>Home</p></Link>
                 <Link href='/projects'><p className='text-lg lg:text-xl onhover'>Projects</p></Link>
                 <Link href='/contact'><p className='text-lg lg:text-xl onhover'>Contact</p></Link>

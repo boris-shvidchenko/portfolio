@@ -17,6 +17,9 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet"></link>
         
+        {/* Favicon */}
+        <link rel="icon" href="/images/profile-logo-light.png" /> 
+
       </Head>
       <body>
         <Main />
