@@ -18,17 +18,15 @@ export default function Contact() {
     const { modal, darkTheme, mobileView } = useContext(Context);
 
     return(
-        <div>
-            <Head>
-                <title>Boris Shvidchenko - Contact</title>
-            </Head>
-            <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
+        <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
+                <Head>
+                    <title>Boris Shvidchenko - Contact</title>
+                </Head>
                 <Navbar />
                 {modal && <Modal />}
                 {mobileView.width <= 768 && <Bio />}
                 {mobileView.width <= 768 && <ProjectContainer />}
                 <ContactContainer />
-            </main>
-        </div>
+        </main>
     )
 }

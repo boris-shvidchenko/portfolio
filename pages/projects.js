@@ -19,7 +19,7 @@ export default function Projects() {
     const { modal, darkTheme, mobileView } = useContext(Context);
 
     return(
-        <main className={` ${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
+        <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
             <Head>
                 <title>Boris Shvidchenko - Projects</title>
             </Head>

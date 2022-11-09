@@ -28,11 +28,11 @@ export default function Modal() {
     }
 
     return (
-        <nav className='flex flex-col pt-52 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80 z-20 headers'>
-            <XMarkIcon className='icons fixed top-10 right-7' onClick={closeModal} />
-            <Link href='/' onClick={closeModal}><p className='text-4xl onhover'>Home</p></Link>
-            <Link href='/#project-container' onClick={closeModal}><p className='text-4xl onhover'>Projects</p></Link>
-            <Link href='/#contact-container' onClick={closeModal}><p className='text-4xl  onhover mb-6'>Contact</p></Link>
+        <nav onClick={closeModal} className='flex flex-col pt-52 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80 z-20 headers'>
+            <XMarkIcon className='icons fixed top-10 right-7'/>
+            <Link href='/'><p className='text-4xl onhover'>Home</p></Link>
+            <Link href='/#project-container'><p className='text-4xl onhover'>Projects</p></Link>
+            <Link href='/#contact-container'><p className='text-4xl  onhover mb-6'>Contact</p></Link>
             <SunIcon onClick={changeTheme} className='h-9 w-9 cursor-pointer'/>
         </nav>
     )
