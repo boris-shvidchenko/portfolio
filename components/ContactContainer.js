@@ -9,7 +9,7 @@ export default function ContactContainer() {
     // Access the application states
     const { darkTheme, formData, setFormData, confirmFormData, setConfirmFormData } = useContext(Context);
 
-    // Boolean variable to verify email format with regex
+    // Boolean variable to validate email format with regex. Code referenced from 'https://www.w3resource.com/javascript/form/email-validation.php'
     const emailVerification = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email);
 
     // Updates form data state when input fields are changed by user
@@ -25,7 +25,7 @@ export default function ContactContainer() {
     // Submit form after validating data
     function submitForm(event) {
         event.preventDefault();
-        // Validate form completion and email format. Email validation code referenced from 'https://www.w3resource.com/javascript/form/email-validation.php'
+        // Validate form completion and email format. 
         if (formData.fullName && formData.email && formData.message && emailVerification) {
             setConfirmFormData(true);
             console.log('Sending') 
@@ -47,7 +47,7 @@ export default function ContactContainer() {
                     setFormData(() => {
                         return {fullName: '', email: '', message: ''}
                     });
-                    setConfirmFormData(true);
+                    // setConfirmFormData(true);
                 }
               })
         } else {
@@ -74,13 +74,13 @@ export default function ContactContainer() {
                 {/* Email address */}
                 <section className='form'>
                     <label htmlFor='email'>Email <span className={`${!formData.email || !emailVerification ? 'text-red-500' : 'hidden'}`}>*</span></label>  
-                    <input type='email' id='email' name='email' required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
+                    <input type='email' id='email' name='email' value={formData.email} required onChange={updateFormData} className={`border form-input ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
                 </section>
 
                 {/* Message */}
                 <section className='form pb-5'>
                     <label htmlFor='message'>Message <span className={`${!formData.message ? 'text-red-500' : 'hidden'}`}>*</span></label>  
-                    <textarea id='message' name='message' rows='4' cols='40' required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}/>
+                    <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}/>
                 </section> 
 
                 {/* Submit button and error message */}

@@ -3,6 +3,7 @@
 export default function (req, res) {
     require('dotenv').config()
     let nodemailer = require('nodemailer');
+    // Transporter will define the 'metadata' for the email submission process
     const transporter = nodemailer.createTransport({
         port: 465,
         host: 'smtp.gmail.com',
@@ -21,8 +22,9 @@ export default function (req, res) {
         text: req.body.message + " | Sent from: " + req.body.email,
         html: `<div>${req.body.message}</div><p>Sent from:
         ${req.body.email}</p>`
-    }
+    };
 
+    // Send the email and log any errors 
     transporter.sendMail(mailData, function (err, info) {
         if (err) {
             console.log(err);
@@ -30,5 +32,5 @@ export default function (req, res) {
             console.log(info);
         }
         res.send(200);
-    })
+    });
 }

@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }) {
   // State
   const [modal, setModal] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
-  const [mobileView, setMobileView] = useState({width: 'undefined'});
+  const [mobileView, setMobileView] = useState({width: ''});
   const [formData, setFormData] = useState({fullName: '', email: '', message: ''});
   const [confirmFormData, setConfirmFormData] = useState(true);
 
