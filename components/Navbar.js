@@ -15,16 +15,16 @@ import { Context } from '../pages/_app';
 export default function Navbar() {
 
     // Access the application states
-    const { modal, setModal, mobileView, darkTheme, setDarkTheme } = useContext(Context);
+    const { modal, setModal, darkTheme, setDarkTheme } = useContext(Context);
 
     // Function used to open the modal by changing the modal state to true
     function openModal() {
-        setModal(true)
+        setModal(true);
     };
 
     // Function used to change the website theme (dark/light) by updating state to true/false
     function changeTheme() {
-        setDarkTheme(prevTheme => !prevTheme)
+        setDarkTheme(prevTheme => !prevTheme);
     }
 
     return(

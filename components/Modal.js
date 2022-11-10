@@ -16,15 +16,14 @@ export default function Modal() {
     // Access the application states
     const { setModal, setDarkTheme } = useContext(Context);
 
-
     // Function used to close the modal by changing the modal state to false
     function closeModal() {
-        setModal(false)
-    };
+        setModal(false);
+    }
 
     // Function used to change the website theme (dark/light) by updating state to true/false
     function changeTheme() {
-        setDarkTheme(prevTheme => !prevTheme)
+        setDarkTheme(prevTheme => !prevTheme);
     }
 
     return (

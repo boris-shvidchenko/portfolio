@@ -1,5 +1,5 @@
 // Hooks
-import { useContext, useRef } from 'react';
+import { useContext } from 'react';
 
 // Context
 import { Context } from '../pages/_app';
@@ -20,7 +20,7 @@ export default function ContactContainer() {
                 ...prevFormData,
                 [event.target.name]: event.target.value
             }
-        })
+        });
     }
 
     // Submit form after validating data
@@ -28,7 +28,7 @@ export default function ContactContainer() {
         event.preventDefault();
         // Validate form completion and email format. 
         if (formData.fullName && formData.email && formData.message && emailVerification) {
-            console.log('Sending') 
+            console.log('Sending');
             // Store form data in 'data', this variable will be used during the message submission process
             let data = formData;
             // Fetch the custom API (submitMessage.js). Set the method, headers, and body to the form data
@@ -44,7 +44,7 @@ export default function ContactContainer() {
                 setMessageSent('Message Sent!');
                 setTimeout(() => {
                     setMessageSent('');
-                }, 8000)
+                }, 8000);
                 console.log('Response received');
                 if (res.status === 200) {
                     console.log('Response succeeded!');
@@ -84,13 +84,7 @@ export default function ContactContainer() {
                 {/* Message */}
                 <section className='form pb-5'>
                     <label htmlFor='message'>Message <span className={`${!formData.message ? 'text-red-500' : 'hidden'}`}>*</span></label>  
-
-                    <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} 
-                    
-                    className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`}
-                    
-                    />
-
+                    <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${darkTheme ? 'bg-[#efefef] text-black' : ''} px-2 py-1`} />
                 </section> 
 
                 {/* Submit button, error message, and successful submission message */}

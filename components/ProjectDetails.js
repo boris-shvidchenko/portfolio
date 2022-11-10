@@ -6,12 +6,11 @@ import { Context } from '../pages/_app';
 
 // Hooks 
 import { useContext } from 'react';
-import { useRouter } from 'next/router';
 
 export default function ProjectDetails({ data }) {
 
     // Access the application states
-    const { modal, darkTheme, mobileView } = useContext(Context);
+    const { darkTheme } = useContext(Context);
 
     return (
         <main className={`px-7 pb-4 pt-5 md:px-20 xl:px-32 2xl:px-40 md:mt-8 md:flex md:space-x-6 lg:space-x-10 h-screen sm:h-full md:h-[calc(100vh-108px)] lg:h-[calc(100vh-112px)] ${darkTheme ? 'text-white' : 'md:text-black'}`}>

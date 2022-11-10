@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }) {
   const [confirmFormData, setConfirmFormData] = useState(true);
   const [messageSent, setMessageSent] = useState('');
 
-  // Sets the mobileView state width property to the current browser width. This is used in order to render components based on where mobile view is used or not
+  // Sets the mobileView state width property to the current browser width. This is used in order to render components based on whether mobile view is used or not.
   // The code in the useEffect hook was referenced from the following source: https://stackoverflow.com/questions/63406435/how-to-detect-window-size-in-next-js-ssr-using-react-hook
   useEffect(() => {
     if (typeof window !== 'undefined') {

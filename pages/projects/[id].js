@@ -17,7 +17,7 @@ import { useRouter } from 'next/router';
 export default function ProjectInfo({ data }) {
 
     // Access the application states
-    const { modal, darkTheme, mobileView } = useContext(Context);
+    const { modal, darkTheme } = useContext(Context);
 
     // Access the page URL and extract the id parameter with router.query. Save the id parameter as 'id' for use in rendering (SSR) the page below.
     const router = useRouter();
@@ -43,7 +43,7 @@ export default function ProjectInfo({ data }) {
     )
 }
 
-// Setting up server side props and  fetching data from projectData array for use in [id].js subpage
+// Setting up server side props and fetching data from projectData array for use in [id].js subpage
 export async function getServerSideProps() {
     const data = projectData;
     return { props: { data } }

@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts */
+/* Font for body text */
 body {
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Font for navbar and modal text */
+.headers {
+    font-family: 'Manrope', sans-serif;
 }
 
 @layer components {
 
-    /* Font used for navbar and modal text */
-    .headers {
-        font-family: 'Manrope', sans-serif;
-    }
-    
     /* Icons class used for all Heroicons */
     .icons {
         @apply h-8 w-8 cursor-pointer
@@ -34,10 +34,12 @@ body {
         @apply w-full h-96 object-cover object-top
     }
 
+    /* Used to set up label/input sections in the form */
     .form {
         @apply flex flex-col space-y-2
     }
 
+    /* Changes the input elements in the form */
     .form-input {
         @apply rounded-sm border border-gray-300
     }

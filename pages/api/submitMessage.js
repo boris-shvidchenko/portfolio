@@ -1,7 +1,7 @@
 // This is the API that will be used to send user messages to our email. Code has been referenced from 'https://medium.com/nerd-for-tech/coding-a-contact-form-with-next-js-and-nodemailer-d3a8dc6cd645' and uses nodemailer and dotenv.
 
 export default function (req, res) {
-    require('dotenv').config()
+    require('dotenv').config();
     let nodemailer = require('nodemailer');
     // Transporter will define the 'metadata' for the email submission process
     const transporter = nodemailer.createTransport({
