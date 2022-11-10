@@ -37,7 +37,7 @@ export default function Navbar() {
                 <Link href='/'><p className='text-lg lg:text-xl onhover'>Home</p></Link>
                 <Link href='/projects'><p className='text-lg lg:text-xl onhover'>Projects</p></Link>
                 <Link href='/contact'><p className='text-lg lg:text-xl onhover'>Contact</p></Link>
-                <SunIcon onClick={changeTheme} className='icons'/>
+                <SunIcon onClick={changeTheme} className='h-7 w-7 lg:h-8 lg:w-8 cursor-pointer'/>
             </div>
             {!modal && <Bars3Icon onClick={openModal} className='icons mt-1 md:hidden'/>}
         </nav>

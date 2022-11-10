@@ -13,7 +13,7 @@ export const projectData = [
         id: 'project-2',
         key: '2',
         title: 'placeholder',
-        summary: 'place',
+        summary: 'placeholder',
         description: 'placeholder',
         img: '#',
         url: '#'
@@ -22,7 +22,7 @@ export const projectData = [
         id: 'project-3',
         key: '3',
         title: 'placeholder',
-        summary: 'place',
+        summary: 'placeholder',
         description: 'placeholder',
         img: '#',
         url: '#'
@@ -31,7 +31,7 @@ export const projectData = [
         id: 'project-4',
         key: '4',
         title: 'placeholder',
-        summary: 'place',
+        summary: 'placeholder',
         description: 'placeholder',
         img: '#',
         url: '#'
