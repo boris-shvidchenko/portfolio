@@ -19,7 +19,7 @@ export default function Bio() {
                 <div className={`bg-gradient-to-b from-black/70 md:bg-none text-white ${darkTheme ? 'md:text-[#efefef]' : 'md:text-black'} pt-[120px] md:pt-0 pb-8 md:pb-0 absolute top-0 px-7 md:px-none md:relative md:top-0`}>
                     <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>About Me</h1>
                     <div>
-                        <p className='mb-2 lg:mb-4'>I am a front end developer with a background in geospatial data analysis and GIS. My interersts include web development and building functional and useful applications for a variety of fields. I enjoy the process of designing clean and effective websites, from the initial planning and design phases all the way to the problem solving and debugging, and the creativity and logic that is required in order to successfully deploy a project. The more complex the build, the better!</p>
+                        <p className='mb-2 lg:mb-4'>I am a front end developer with a background in geospatial data analysis and GIS. My interests include web development and building functional applications for a variety of uses. I enjoy the process of designing clean and effective websites, from the initial planning and design phases all the way to the problem solving and debugging, and the creativity and logic that is required in order to successfully deploy a project. The more complex the build, the better!</p>
                         <p className='mb-2 lg:mb-4'>Take a look at some of my personal projects and feel free to contact me at any time.</p>
                         <p>When not working you can find me paragliding, trail running, traveling, and training for future goals.</p>
                     </div>

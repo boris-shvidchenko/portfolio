@@ -1,39 +1,39 @@
 // Array will store individual project information for the projects page 
 export const projectData = [
     {
-        id: 'hulu-clone',
-        key: '1a',
-        title: 'Hulu Clone 1',
-        summary: 'A clone of Hulu.',
-        description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
-        img: '../images/project-images/hulu-img2.png',
-        url: 'https://hulu-clone-gules-one.vercel.app/'
+        id: 'project-1',
+        key: '1',
+        title: 'placeholder',
+        summary: 'placeholder',
+        description: 'placeholder',
+        img: '#',
+        url: '#'
     },
     {
-        id: 'hulu-clone2',
-        key: '2a',
-        title: 'Hulu Clone 2',
-        summary: 'A clone of Hulu.',
-        description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
-        img: '../images/project-images/hulu-img2.png',
-        url: 'https://hulu-clone-gules-one.vercel.app/'
+        id: 'project-2',
+        key: '2',
+        title: 'placeholder',
+        summary: 'place',
+        description: 'placeholder',
+        img: '#',
+        url: '#'
     },
     {
-        id: 'hulu-clone3',
-        key: '3a',
-        title: 'Hulu Clone 3',
-        summary: 'A clone of Hulu.',
-        description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
-        img: '../images/project-images/hulu-img2.png',
-        url: 'https://hulu-clone-gules-one.vercel.app/'
+        id: 'project-3',
+        key: '3',
+        title: 'placeholder',
+        summary: 'place',
+        description: 'placeholder',
+        img: '#',
+        url: '#'
     },
     {
-        id: 'hulu-clone4',
-        key: '4a',
-        title: 'Hulu Clone 4',
-        summary: 'A clone of Hulu.',
-        description: 'A clone of Hulu with a focus on clean and responsive design. This project uses Tailwind CSS 3.0, Next.js, and React. I also used icons from Hero Icons, used the TMDB API to obtain movie data (https://www.themoviedb.org/), and explored concepts of server side rendering.',
-        img: '../images/project-images/hulu-img2.png',
-        url: 'https://hulu-clone-gules-one.vercel.app/'
+        id: 'project-4',
+        key: '4',
+        title: 'placeholder',
+        summary: 'place',
+        description: 'placeholder',
+        img: '#',
+        url: '#'
     }
 ]
