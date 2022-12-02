@@ -30,5 +30,3 @@ export default function ProjectDetails({ data }) {
         </main>
     )
 }
-
-// images/project-images/trivia.png
