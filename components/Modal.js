@@ -27,7 +27,7 @@ export default function Modal() {
     }
 
     return (
-        <nav onClick={closeModal} className='landscape:pt-0 landscape:space-y-3 flex flex-col pt-28 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80 z-20 headers'>
+        <nav onClick={closeModal} className='landscape:pt-4 landscape:space-y-3 flex flex-col pt-28 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80 z-20 headers'>
             <XMarkIcon className='icons fixed top-7 right-7'/>
             <Link href='/'><p className='text-4xl onhover'>Home</p></Link>
             <Link href='/#project-container'><p className='text-4xl onhover'>Projects</p></Link>
