@@ -17,6 +17,11 @@ export default function Navbar() {
     // Access the application states
     const { modal, setModal, darkTheme, setDarkTheme } = useContext(Context);
 
+    // Styles
+    const navBorder = darkTheme ? 'border-b shadow-md border-b-[#1a1a1a] md:border-none' : 'border-b shadow-md border-b-[#cacaca] md:border-none';
+    const navTextColor = darkTheme ? 'text-white' : 'text-black';
+    const navBgColor = darkTheme ? 'md:bg-[#424141]' : 'bg-[#ffffff]';
+
     // Function used to open the modal by changing the modal state to true
     function openModal() {
         setModal(true);
@@ -28,7 +33,7 @@ export default function Navbar() {
     }
 
     return(
-        <nav className={`${darkTheme ? 'border-b shadow-md border-b-[#1a1a1a] md:border-none' : 'border-b shadow-md border-b-[#cacaca] md:border-none'} bg-[#272727] flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 ${darkTheme ? 'text-white' : 'text-black'} ${darkTheme ? 'md:bg-[#424141]' : 'bg-[#ffffff]'} z-10 headers`}>
+        <nav className={`${navBorder} bg-[#272727] flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 ${navTextColor} ${navBgColor} z-10 headers`}>
             <div className='flex items-center space-x-6 lg:space-x-8'>
                 <Image src={!darkTheme ? '/images/profile-logo-light.png' : '/images/profile-logo-dark.png'} alt='Profile logo' height={40} width={40} />
                 <Link href='/'><p className='font-semibold text-2xl lg:text-4xl'>Boris Shvidchenko</p></Link>

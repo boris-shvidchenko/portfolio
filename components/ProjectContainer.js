@@ -15,6 +15,9 @@ export default function ProjectContainer() {
     // Access the application states
     const { darkTheme } = useContext(Context);
 
+    // Styles
+    const textColor = darkTheme ? 'text-[#efefef]' : 'text-black';
+
     // Project data array will be mapped and an individual Project component will be returned
     const projectComponents = projectData.map((project) => {
         return (
@@ -26,7 +29,7 @@ export default function ProjectContainer() {
     return (
         <main className='px-7 pt-10 md:pt-0 md:pb-[225px] md:px-20 xl:px-32 2xl:px-40 h-100vh p'>
             <div id='project-container' className='relative -top-[100px]'></div>
-            <section className={`mb-7 md:mb-0 md:mt-8 ${darkTheme ? 'text-[#efefef]' : 'text-black'}`}>
+            <section className={`mb-7 md:mb-0 md:mt-8 ${textColor}`}>
                 <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Projects</h1>
                 <p className='mb-2 lg:mb-5'>Some of the projects that I have worked on can be found here. Unless otherwise noted all of my work has been built with React, Next.js, and Tailwind CSS.</p>
             </section>
