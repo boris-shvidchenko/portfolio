@@ -21,7 +21,7 @@ export default function ProjectContainer() {
     // Project data array will be mapped and an individual Project component will be returned
     const projectComponents = projectData.map((project) => {
         return (
-            // Note: {...project} passes all project propertires as props to be destructured in Project component
+            // Note: Passing props by {...project} doesnt work since the key prop is not recognized by Vercel on deployment.
             <Project 
                 id = {project.id}
                 key = {project.key}

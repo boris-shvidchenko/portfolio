@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 // Context
 import { Context } from '../pages/_app';
 
-export default function Project({ id, key, title, summary, img, url }) {
+export default function Project({ id, title, summary, img, url }) {
 
     // Access the application states
     const { darkTheme } = useContext(Context);
