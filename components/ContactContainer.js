@@ -72,7 +72,7 @@ export default function ContactContainer() {
             <div id='contact-container' className='relative -top-[110px]'></div>
             <section className='md:mt-8 mb-8'>
                 <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Get In Touch</h1>
-                <p>Reach out by sending me a message. I'll get back to you as soon as I can.</p>
+                <p>Reach out by sending me a message. I&apos;ll get back to you as soon as I can.</p>
             </section>
             
             <form onSubmit={(e) => submitForm(e)} className={`form ${formBorder} shadow-md border-[#4e4e4e] md:w-[525px] p-3 rounded-md ${formBgColor}`}>
