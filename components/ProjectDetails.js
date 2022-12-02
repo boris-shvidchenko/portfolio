@@ -18,9 +18,9 @@ export default function ProjectDetails({ data }) {
     const bgColorMedium = darkTheme ? 'md:bg-[#424141]' : 'md:bg-[#d7dee1]';
 
     return (
-        <main className={`px-7 pb-4 pt-2 md:px-20 md:pr-8 xl:px-32 2xl:px-40 md:mt-8 md:flex md:space-x-6 lg:space-x-10 md:h-[calc(100vh-108px)] lg:h-[calc(100vh-112px)] ${darkTheme ? 'text-white' : 'md:text-black'}`}>
-            <img src={`../${data?.img}`} alt={`Example image of the ${data?.title} build`} className='w-screen md:w-80 md:h-80 lg:h-[450px] lg:w-[450px] mt-5 md:mt-2 rounded-md' />
-            <section className='md:px-7 pb-5 md:pb-0 lg:text-md'>
+        <main className={`px-7 pb-4 pt-2 lg:px-20 md:pr-8 xl:px-32 2xl:px-40 md:mt-8 lg:flex md:space-x-6 lg:space-x-10 md:h-[calc(100vh-112px)] lg:h-[calc(100vh-112px)] ${darkTheme ? 'text-white' : 'md:text-black'}`}>
+            <img src={`../${data?.img}`} alt={`Example image of the ${data?.title} build`} className='w-screen md:object-cover md:w-[500px] md:h-[204px] lg:h-[450px] lg:w-[450px] mt-5 md:mt-2 md:mb-8 md:mx-auto md:object-top lg:object-center rounded-md' />
+            <section className=' md:px-7 pb-5 md:pb-0 lg:text-md'>
                 <p className='text-2xl mt-5 md:mt-0 mb-3 lg:mb-5 font-semibold'>{data?.title}</p>
                 <p className='mb-2 lg:mb-4'>{data?.description}</p>
                 <p className='mb-2 lg:mb-4'>{data?.description2}</p>
