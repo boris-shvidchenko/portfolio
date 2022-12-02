@@ -15,7 +15,7 @@ import { Context } from '../pages/_app';
 export default function Navbar() {
 
     // Access the application states
-    const { modal, setModal, darkTheme, setDarkTheme, mobileView } = useContext(Context);
+    const { modal, setModal, darkTheme, setDarkTheme } = useContext(Context);
 
     // Styles
     const navBorder = darkTheme ? 'border-b shadow-md border-b-[#1a1a1a] md:border-none' : 'border-b shadow-md border-b-[#cacaca] md:border-none';
