@@ -24,6 +24,11 @@ body {
         @apply hover:font-semibold 
     }
 
+    /* Used on the social links in the Home page/Bio */
+    .social {
+        @apply flex items-center justify-center space-x-3
+    }
+
     /* Used to highlight social links on hover */
     .onhover-social {
         @apply hover:outline outline-offset-0 outline-1 
