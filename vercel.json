@@ -1,8 +1,0 @@
-{
-    "version": 2,
-    "name": "portfolio",
-    "builds": [
-        {"src":"_app.js", "use": "@vercel/node"}
-    ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
