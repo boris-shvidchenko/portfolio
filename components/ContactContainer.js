@@ -68,7 +68,7 @@ export default function ContactContainer() {
     }
 
     return(
-        <main className={`pb-60 md:pb-0 px-7 pt-10 md:pt-0 md:px-20 xl:px-32 2xl:px-40 md:h-[calc(100vh-108px)] lg:h-[calc(100vh-112px)] ${textColor}`}>
+        <main className={`pb-60 md:pb-0 px-7 pt-5 md:pt-0 md:px-20 xl:px-32 2xl:px-40 md:h-[calc(100vh-108px)] lg:h-[calc(100vh-112px)] ${textColor}`}>
             <div id='contact-container' className='relative -top-[110px]'></div>
             <section className='md:mt-8 mb-8'>
                 <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Get In Touch</h1>
