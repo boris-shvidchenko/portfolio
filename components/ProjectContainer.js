@@ -22,7 +22,7 @@ export default function ProjectContainer() {
     const projectComponents = projectData.map((project) => {
         return (
             // Note: {...project} passes all project propertires as props to be destructured in Project component
-            <Project {...project} />
+            <Project {...project, key = project.key} />
         )
     });
 
