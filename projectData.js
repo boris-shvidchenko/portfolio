@@ -11,14 +11,14 @@ export const projectData = [
         url: 'https://trivia-bshvid.vercel.app/'
     },
     {
-        id: 'project-2',
+        id: 'cafe',
         key: '2',
-        title: 'placeholder',
-        summary: 'placeholder',
-        description: 'placeholder',
-        description2: '',
-        img: '#',
-        url: 'https://trivia-bshvid.vercel.app/'
+        title: 'Coffee Shop Website',
+        summary: 'A cafe website build.',
+        description: "The main objective for this project was to focus on creating a clean and effective website that followed the fundamentals of web design, including: the use of white space, visual hierarchy, fonts, and color contrast. The idea was to create a fictional coffee shop/café website that was simple in design yet responsive and user friendly no matter what device the website was viewed on. This was an enjoyable build that allowed me to experiment with various looks to see what worked (and what didn't). ",
+        description2: 'The majority of images that I used came from Pexels and the icons were either from Heroicons or from Icons8.    ',
+        img: 'images/project-images/cafe.png',
+        url: 'https://cafe-bshvid.vercel.app/'
     },
     {
         id: 'project-3',
