@@ -17,6 +17,7 @@ export default function ProjectContainer() {
 
     // Styles
     const textColor = darkTheme ? 'text-[#efefef]' : 'text-black';
+    const bgColor = darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]';
 
     // Project data array will be mapped and an individual Project component will be returned
     const projectComponents = projectData.map((project) => {
@@ -36,7 +37,7 @@ export default function ProjectContainer() {
     });
 
     return (
-        <main className='px-7 pt-5 md:pt-0 md:pb-[225px] md:px-20 xl:px-32 2xl:px-40 p'>
+        <main className={`px-7 pt-5 md:pt-0 md:pb-10 md:px-20 xl:px-32 2xl:px-40 ${bgColor}`}>
             <div id='project-container' className='relative -top-[100px]'></div>
             <section className={`mb-7 md:mb-0 md:mt-8 ${textColor}`}>
                 <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Projects</h1>

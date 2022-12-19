@@ -32,7 +32,7 @@ export default function ProjectInfo({ data }) {
     })
 
     return (
-        <main className={` ${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'}`}>
+        <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'} h-screen`}>
             <Head>
                 <title>{`Boris Shvidchenko - ${projData.title}`}</title>
             </Head>

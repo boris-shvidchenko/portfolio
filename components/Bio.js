@@ -18,9 +18,10 @@ export default function Bio() {
     const linkBgColor = darkTheme ? 'bg-[#424141]' : 'bg-gray-500';
     const linkBgColorMedium = darkTheme ? 'md:bg-[#424141]' : 'md:bg-[#d7dee1]';
     const linkSmScrn = mobileView.width <= 470 ? 'w-6' : '';
+    const bgColor = darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]';
 
     return (
-        <main className='md:px-20 xl:px-32 2xl:px-40 md:h-[calc(100vh-108px)] lg:h-[calc(100vh-112px)]'>
+        <main className={`md:px-20 xl:px-32 2xl:px-40 md:pb-10 ${bgColor}`}>
             <section className='md:flex md:space-x-6 lg:space-x-10 md:mt-8'>
                 <img src='../images/profile-picture.png' alt='Profile picture' className={`w-screen md:w-80 h-full lg:w-[450px] md:mt-2 md:rounded-sm`} />
                 <div className={`bg-gradient-to-b from-black/70 md:bg-none text-white ${textColor} pt-[92px] sm:pt-[120px] md:pt-0 pb-8 md:pb-0 absolute top-0 px-7 md:px-none md:relative md:top-0 `}>
