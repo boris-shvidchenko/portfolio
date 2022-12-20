@@ -18,7 +18,7 @@ export default function Contact() {
     const { modal, darkTheme, mobileView } = useContext(Context);
   
     return(
-        <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'} h-screen`}>
+        <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'} h-auto md:h-screen`}>
                 <Head>
                     <title>Boris Shvidchenko - Contact</title>
                 </Head>

@@ -11,14 +11,13 @@ import { Context } from './_app';
 // Hooks
 import { useContext } from 'react';
 
-
 export default function Home() {
 
   // Access the application states
   const { modal, darkTheme, mobileView } = useContext(Context);
 
   return (
-    <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'} h-screen`}>
+    <main className={`${darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]'} h-auto md:h-screen`}>
       <Navbar />
       {modal && <Modal />}
       <Bio />
