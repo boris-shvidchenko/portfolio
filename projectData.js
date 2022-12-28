@@ -34,14 +34,14 @@ export const projectData = [
         url2: 'https://github.com/boris-shvidchenko/trivia-game'
     },
     {
-        id: 'project-4',
-        key: '5',
-        title: 'placeholder',
-        summary: 'placeholder',
-        description: 'placeholder',
-        description2: '',
-        img: '#',
-        url: '#',
-        url2: ''
+        id: 'geobooks',
+        key: '4',
+        title: 'GeoBooks',
+        summary: 'A book search app.',
+        description: 'GeoBooks is an easy to use application which allows users to look for books through the Google Books API. One of my main goals for this build was to focus on a more modern design and I enjoyed exploring the different approaches of how an application/website can be set up in order to ensure a better user experience. Furthermore, I decided to go with a dark theme for this project and figuring out how to best set up the components and overall text to visually complement the theme was at times challenging but also a great learning experience.',
+        description2: "I also explored a number of dependencies, some that I haven't used before, which provided useful design features and helped make the build run smoother and, in my opinion, look better. Dependencies such as the React Promise Tracker helped track asynchronous operations and render loading components, React Loader Spinner provided ready to use loading animations, and Tailwind add ons such as Line Clamp helped make text more responsive. Icons came from Heroicons and Icons8.",
+        img: 'images/project-images/geobooks.png',
+        url: 'https://geobooks.vercel.app/',
+        url2: 'https://github.com/boris-shvidchenko/book-search-app'
     }
 ]
