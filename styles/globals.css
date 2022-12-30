@@ -46,6 +46,6 @@ body {
 
     /* Changes the input elements in the form */
     .form-input {
-        @apply rounded-sm border border-gray-300
+        @apply rounded-md shadow-sm drop-shadow-sm border border-gray-300 focus:outline-none focus:border-gray-400
     }
 }

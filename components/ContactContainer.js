@@ -11,11 +11,9 @@ export default function ContactContainer() {
 
     // Styles 
     const textColor = darkTheme ? 'text-[#efefef]' : 'md:text-black';
-    const formBorder = darkTheme ? 'border' : '';
-    const formBgColor = darkTheme ? 'bg-[#272727]' : 'bg-[#efefef]';
+    const formBgColor = darkTheme ? 'bg-[#424141]' : 'bg-[#efefef]';
     const formInputColor = darkTheme ? 'bg-[#efefef] text-black' : '';
-    const btnBgColor = darkTheme ? 'bg-[#424141]' : 'bg-gray-400';
-    const btnBgColorMedium = darkTheme ? 'md:bg-[#424141]' : '';
+    const btnBgColor = darkTheme ? 'bg-[#272727]' : 'bg-gray-500 text-[#ffffff]';
     const bgColor = darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]';
 
     // Boolean variable to validate email format with regex. Code referenced from 'https://www.w3resource.com/javascript/form/email-validation.php'
@@ -76,7 +74,7 @@ export default function ContactContainer() {
                 <p>Reach out by sending me a message. I&apos;ll get back to you as soon as I can.</p>
             </section>
             
-            <form onSubmit={(e) => submitForm(e)} className={`form ${formBorder} shadow-md border-[#4e4e4e] md:w-[525px] p-3 rounded-md ${formBgColor}`}>
+            <form onSubmit={(e) => submitForm(e)} className={`form shadow-md shadow-lg drop-shadow-lg border-[#4e4e4e] md:w-[525px] p-3 rounded-md ${formBgColor}`}>
 
                 {/* Name */}
                 <section className='form'>
@@ -98,7 +96,7 @@ export default function ContactContainer() {
 
                 {/* Submit button, error message, and successful submission message */}
                 <section className='flex items-center'>
-                    <button type='submit' className={`font-semibold w-28 rounded-md p-1 ${btnBgColor} ${btnBgColorMedium} min-w-fit onhover-social onhover`}>Submit</button>
+                    <button type='submit' className={`w-28 rounded-md p-1 ${btnBgColor} min-w-fit onhover-social onhover`}>Submit</button>
                     <p className={`ml-10 text-sm ${!confirmFormData ? 'text-red-500' : 'hidden'}`}>Please make sure your email is correct.</p>
                     <p className='ml-10'>{messageSent}</p>
                 </section>

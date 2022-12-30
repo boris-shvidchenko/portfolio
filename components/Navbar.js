@@ -33,7 +33,7 @@ export default function Navbar() {
     }
 
     return(
-        <nav className={`${navBorder} border-b md:border-none shadow-md bg-[#272727] flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 ${navTextColor} ${navBgColor} z-10 headers`}>
+        <nav className={`${navBorder} border-b md:border-none shadow-md flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 ${navTextColor} ${navBgColor} z-10 headers`}>
             <div className='flex items-center space-x-4 sm:space-x-6 lg:space-x-8'>
                 <Image src={!darkTheme ? '/images/profile-logo-light.png' : '/images/profile-logo-dark.png'} alt='Profile logo' height={40} width={40} />
                 <Link href='/'><p className='text-2xl lg:text-4xl'>Boris Shvidchenko</p></Link>
