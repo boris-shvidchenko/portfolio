@@ -93,7 +93,7 @@ export default function ContactContainer() {
                     <input type='email' id='email' name='email' value={formData.email} required onChange={updateFormData} className={`border form-input ${formInputColor} px-2 py-1`} />
                 </section>
                 {/* Message */}
-                <section className='form pb-5'>
+                <section className='form pb-3'>
                     <label htmlFor='message'>Message <span className={`${!formData.message ? 'text-red-500' : 'hidden'}`}>*</span></label>  
                     <textarea id='message' name='message' rows='4' cols='40' value={formData.message} required onChange={updateFormData} className={`border form-input max-h-72 min-h-[34px] ${formInputColor} px-2 py-1`} />
                 </section> 
