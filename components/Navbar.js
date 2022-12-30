@@ -18,9 +18,9 @@ export default function Navbar() {
     const { modal, setModal, darkTheme, setDarkTheme } = useContext(Context);
 
     // Styles
-    const navBorder = darkTheme ? 'border-b-[#1a1a1a]' : 'border-b-[#cacaca]';
+    const navBorder = darkTheme ? 'border-b-[#404040]' : 'border-b-[#cacaca]';
     const navTextColor = darkTheme ? 'text-white' : 'text-black';
-    const navBgColor = darkTheme ? 'md:bg-[#424141]' : 'bg-[#ffffff]';
+    const navBgColor = darkTheme ? 'bg-[#424141]' : 'bg-[#ffffff]';
 
     // Function used to open the modal by changing the modal state to true
     function openModal() {
