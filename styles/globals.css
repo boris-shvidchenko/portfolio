@@ -31,7 +31,7 @@ body {
 
     /* Used to highlight social links on hover */
     .onhover-social {
-        @apply hover:outline outline-offset-0 outline-1 
+        @apply hover:shadow-md hover:drop-shadow-md
     }
 
     /* Used to resize the individual project images used in the projects page */

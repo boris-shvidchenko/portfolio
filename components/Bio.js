@@ -23,7 +23,7 @@ export default function Bio() {
     return (
         <main className={`md:px-20 xl:px-32 2xl:px-40 md:pb-10 ${bgColor}`}>
             <section className='md:flex md:space-x-6 lg:space-x-10 md:mt-8'>
-                <img src='../images/profile-picture.png' alt='Profile picture' className={`w-screen md:w-80 h-full lg:w-[450px] md:mt-2 md:rounded-sm`} />
+                <img src='../images/profile-picture.png' alt='Profile picture' className='w-screen md:w-80 h-full lg:w-[450px] md:mt-2 md:rounded-sm shadow-lg drop-shadow-lg' />
                 <div className={`bg-gradient-to-b from-black/70 md:bg-none text-white ${textColor} pt-[92px] sm:pt-[120px] md:pt-0 pb-8 md:pb-0 absolute top-0 px-7 md:px-none md:relative md:top-0 `}>
                     <h1 className={`text-2xl mb-3 lg:mb-5 font-semibold`}>About Me</h1>
                     <div className={`${mobileView.width <= 470 ? 'text-sm -mt-2' : ''}`}>
@@ -47,7 +47,7 @@ export default function Bio() {
                             className={`absolute left-2 w-28 ${mobileView.width <= 470 ? 'text-sm' : ''} mt-3 sm:mt-0 sm:left-0 sm:static flex space-x-2 rounded-md md:border ${linkBorderColor} p-2 ${linkBgColor} ${linkBgColorMedium} min-w-fit onhover-social onhover ${mobileView.width <= 470 ? 'mt-0 left-[135px]' : ''}`}>
                             <div className='social'>
                                 <img src='https://d33wubrfki0l68.cloudfront.net/d8e6e1e636531e28274a1b8b6d947b817f6145bd/d42d3/assets/svg/linkedin-dark.svg' alt="Boris Shvidchenko Linkedin Profile" className={`w-7 ${linkSmScrn} opacity-80`} />
-                                <p>Linkedin</p>
+                                <p className='w-[4.2rem]'>Linkedin</p>
                             </div>
                         </Link>
                     </div>
