@@ -15,7 +15,7 @@ export default function Document() {
         {/* The 3 link tags below are for/from Google Fonts for header text (navbar and modal) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet" />
         
         {/* Favicon */}
         <link rel="icon" href="/images/profile-logo-light.png" /> 
