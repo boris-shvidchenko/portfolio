@@ -48,4 +48,137 @@ body {
     .form-input {
         @apply rounded-md shadow-sm drop-shadow-sm border border-gray-300 focus:outline-none focus:border-gray-400
     }
+
+    /* General component styles */
+    .header {
+        @apply text-2xl mb-3 lg:mb-5 font-semibold
+    }
+
+    .para {
+        @apply mb-2 lg:mb-4
+    }
+
+    .bio-main {
+        @apply md:px-20 xl:px-32 2xl:px-40 md:pb-10
+    }
+
+    .bio-sec {
+        @apply md:flex md:space-x-6 lg:space-x-10 md:mt-8
+    }
+
+    .bio-img {
+        @apply w-screen md:w-80 h-full lg:w-[450px] md:mt-2 md:rounded-md shadow-lg drop-shadow-lg
+    }
+
+    .bio-div1 {
+        @apply bg-gradient-to-b from-black/70 md:bg-none text-white pt-[92px] sm:pt-[120px] md:pt-0 pb-8 md:pb-0 absolute top-0 px-7 md:relative md:top-0
+    }
+
+    .bio-social {
+        @apply mt-5 sm:flex space-x-5 md:mt-3 lg:mt-10
+    }
+
+    .bio-link {
+        @apply w-28 flex space-x-2 rounded-md md:border p-2 min-w-fit onhover-social onhover
+    }
+
+    .contact-main {
+        @apply pb-60 md:pb-10 px-7 pt-5 md:pt-0 md:px-20 xl:px-32 2xl:px-40
+    }
+
+    .contact-form {
+        @apply form shadow-md drop-shadow-lg border-[#4e4e4e] md:w-[525px] p-3 rounded-md
+    }
+
+    .contact-btn {
+        @apply w-28 rounded-md p-1 min-w-fit onhover-social onhover
+    }
+
+    .modal {
+        @apply landscape:pt-4 landscape:space-y-3 flex flex-col pt-28 items-center space-y-10 mx-auto fixed top-0 w-screen h-screen text-white bg-black/80 z-20 headers
+    }
+
+    .modal-link {
+        @apply text-4xl onhover
+    }
+
+    .nav-main {
+        @apply border-b md:border-none shadow-md flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 z-10 headers
+    }
+
+    .nav-div1 {
+        @apply flex items-center space-x-4 sm:space-x-6 lg:space-x-8
+    }
+
+    .nav-div2 {
+        @apply hidden md:space-x-6 lg:space-x-10 mt-1 items-center md:flex
+    }
+
+    .nav-link {
+        @apply text-lg lg:text-xl w-20 text-center onhover
+    }
+
+    .proj-cont-main {
+        @apply px-7 pt-5 md:pt-0 md:pb-10 md:px-20 xl:px-32 2xl:px-40
+    }
+
+    .proj-cont-sec1 {
+        @apply mb-7 md:mb-0 md:mt-8
+    }
+
+    .proj-cont-sec2 {
+        @apply md:mt-12 grid lg:grid-cols-2 2xl:grid-cols-3 lg:gap-x-10 gap-y-10
+    }
+
+    .proj-main {
+        @apply max-h-[480px] p-3 shadow-lg drop-shadow-lg rounded-md
+    }
+
+    .proj-title {
+        @apply mb-2 text-lg font-semibold
+    }
+
+    .proj-div1 {
+        @apply overflow-hidden rounded-md shadow-md drop-shadow-sm
+    }
+
+    .proj-link {
+        @apply project-image rounded-md hover:scale-105 duration-300
+    }
+
+    .proj-div2 {
+        @apply flex items-center justify-between mt-2
+    }
+
+    .proj-info {
+        @apply flex items-center cursor-pointer onhover
+    }
+
+    .proj-p {
+        @apply italic w-20 text-center
+    }
+
+    .proj-details-main {
+        @apply px-7 pb-4 md:pb-10 pt-2 lg:px-20 md:pr-8 xl:px-32 2xl:px-40 md:mt-8 lg:flex md:space-x-6 lg:space-x-10
+    }
+
+    .proj-details-img {
+        @apply w-screen md:object-cover md:w-[500px] md:h-[204px] lg:h-[450px] lg:w-[450px] mt-5 md:mt-2 md:mb-8 md:mx-auto md:object-top lg:object-center rounded-md shadow-lg drop-shadow-lg
+    }
+
+    .proj-details-sec1 {
+        @apply md:px-7 pb-5 md:pb-0
+    }
+
+    .proj-details-title {
+        @apply text-2xl mt-5 md:mt-0 mb-3 lg:mb-5 font-semibold
+    }
+
+    .proj-details-sec2 {
+        @apply flex space-x-5 text-[#ffffff] md:text-[#000000]
+    }
+
+    .proj-details-link {
+        @apply w-28 mt-7 sm:left-0 sm:static flex space-x-2 rounded-md md:border p-2 min-w-fit onhover-social onhover
+    } 
 }

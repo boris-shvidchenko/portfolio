@@ -33,15 +33,15 @@ export default function Navbar() {
     }
 
     return(
-        <nav className={`${navBorder} border-b md:border-none shadow-md flex justify-between px-7 md:px-20 xl:px-32 2xl:px-40 py-5 items-center sticky top-0 ${navTextColor} ${navBgColor} z-10 headers`}>
-            <div className='flex items-center space-x-4 sm:space-x-6 lg:space-x-8'>
+        <nav className={`nav-main ${navBorder} ${navTextColor} ${navBgColor}`}>
+            <div className='nav-div1'>
                 <Image src={!darkTheme ? '/images/profile-logo-light.png' : '/images/profile-logo-dark.png'} alt='Profile logo' height={40} width={40} />
                 <Link href='/'><p className='text-2xl lg:text-4xl'>Boris Shvidchenko</p></Link>
             </div>
-            <div className='hidden md:space-x-6 lg:space-x-10 mt-1 items-center md:flex'>
-                <Link href='/'><p className='text-lg lg:text-xl w-20 text-center pl-1 onhover'>Home</p></Link>
-                <Link href='/projects'><p className='text-lg lg:text-xl w-20 text-center onhover'>Projects</p></Link>
-                <Link href='/contact'><p className='text-lg lg:text-xl w-20 text-center onhover'>Contact</p></Link>
+            <div className='nav-div2'>
+                <Link href='/'><p className='nav-link pl-1'>Home</p></Link>
+                <Link href='/projects'><p className='nav-link'>Projects</p></Link>
+                <Link href='/contact'><p className='nav-link'>Contact</p></Link>
                 <SunIcon onClick={changeTheme} className='h-7 w-7 lg:h-8 lg:w-8 cursor-pointer'/>
             </div>
             {!modal && <Bars3Icon onClick={openModal} className='icons mt-1 md:hidden'/>}

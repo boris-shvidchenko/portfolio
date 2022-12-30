@@ -37,13 +37,13 @@ export default function ProjectContainer() {
     });
 
     return (
-        <main className={`px-7 pt-5 md:pt-0 md:pb-10 md:px-20 xl:px-32 2xl:px-40 ${bgColor}`}>
+        <main className={`proj-cont-main ${bgColor}`}>
             <div id='project-container' className='relative -top-[100px]'></div>
-            <section className={`mb-7 md:mb-0 md:mt-8 ${textColor}`}>
-                <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Projects</h1>
+            <section className={`proj-cont-sec1 ${textColor}`}>
+                <h1 className='header'>Projects</h1>
                 <p className='mb-2 lg:mb-5'>Some of the projects that I have worked on can be found here. Unless otherwise noted all of my work has been built with React, Next.js, and Tailwind CSS.</p>
             </section>
-            <section className='md:mt-12 grid lg:grid-cols-2 2xl:grid-cols-3 lg:gap-x-10 gap-y-10'>
+            <section className='proj-cont-sec2'>
                 {projectComponents} 
             </section>
         </main>

@@ -75,13 +75,13 @@ export default function ContactContainer() {
     }
 
     return(
-        <main className={`pb-60 md:pb-10 px-7 pt-5 md:pt-0 md:px-20 xl:px-32 2xl:px-40 ${textColor} ${bgColor}`}>
+        <main className={`contact-main ${textColor} ${bgColor}`}>
             <div id='contact-container' className='relative -top-[100px]'></div>
             <section className='md:mt-8 mb-8'>
-                <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Get In Touch</h1>
+                <h1 className='header'>Get In Touch</h1>
                 <p>Reach out by sending me a message. I&apos;ll get back to you as soon as I can.</p>
             </section>
-            <form onSubmit={(e) => submitForm(e)} className={`form shadow-md shadow-lg drop-shadow-lg border-[#4e4e4e] md:w-[525px] p-3 rounded-md ${formBgColor}`}>
+            <form onSubmit={(e) => submitForm(e)} className={`contact-form ${formBgColor}`}>
                 {/* Name */}
                 <section className='form'>
                     <label htmlFor='fullName'>Full Name <span className={`${!formData.fullName ? 'text-red-500' : 'hidden'}`}>*</span></label>
@@ -99,7 +99,7 @@ export default function ContactContainer() {
                 </section> 
                 {/* Submit button, error message, and successful submission message */}
                 <section className='flex items-center'>
-                    <button type='submit' className={`w-28 rounded-md p-1 ${btnBgColor} min-w-fit onhover-social onhover`}>Submit</button>
+                    <button type='submit' className={`${btnBgColor} contact-btn`}>Submit</button>
                     <p className={`ml-10 text-sm ${!confirmFormData ? 'text-red-500' : 'hidden'}`}>Please make sure your email is correct.</p>
                     <p className='ml-10'>{messageSent}<Loading /></p>
                 </section>
