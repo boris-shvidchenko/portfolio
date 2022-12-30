@@ -10,7 +10,7 @@ import { useContext } from 'react';
 export default function ProjectDetails({ data }) {
 
     // Access the application states
-    const { darkTheme } = useContext(Context);
+    const { darkTheme, mobileView } = useContext(Context);
 
     // Styles
     const borderMedium = darkTheme ? 'md:border-none' : 'md:border-black';
@@ -19,6 +19,7 @@ export default function ProjectDetails({ data }) {
     const bgColor = darkTheme ? 'bg-[#272727]' : 'bg-[#d7dee1]';
     const txtColor = darkTheme ? 'text-white' : 'md:text-black';
     const txtColor2 = darkTheme ? 'md:text-white' : 'md:text-black';
+    const linkPlacement = mobileView.width <= 400 ? 'mt-4 relative -left-5' : '';
 
     return (
         <main className={`proj-details-main ${txtColor} ${bgColor}`}>
@@ -27,7 +28,7 @@ export default function ProjectDetails({ data }) {
                 <p className='proj-details-title'>{data?.title}</p>
                 <p className='para'>{data?.description}</p>
                 <p className='para'>{data?.description2}</p>
-                <section className={`proj-details-sec2 ${txtColor2}`}>
+                <section className={`proj-details-sec2 ${mobileView.width <= 400 ? '' : 'flex'} ${txtColor2}`}>
                     <Link 
                         href={data?.url} 
                         target='_blank' 
@@ -38,7 +39,7 @@ export default function ProjectDetails({ data }) {
                     <Link 
                         href={data?.url2} 
                         target='_blank' 
-                        className={`proj-details-link ${borderMedium} ${bgBtnColor} ${bgColorMedium}`}
+                        className={`proj-details-link ${linkPlacement} ${borderMedium} ${bgBtnColor} ${bgColorMedium}`}
                         >
                         <p className='w-28 text-center'>Source Code</p>
                     </Link>

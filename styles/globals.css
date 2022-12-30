@@ -175,7 +175,7 @@ body {
     }
 
     .proj-details-sec2 {
-        @apply flex space-x-5 text-[#ffffff] md:text-[#000000]
+        @apply space-x-5 text-[#ffffff] md:text-[#000000]
     }
 
     .proj-details-link {
