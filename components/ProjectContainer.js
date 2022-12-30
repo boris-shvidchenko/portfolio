@@ -43,7 +43,7 @@ export default function ProjectContainer() {
                 <h1 className='text-2xl mb-3 lg:mb-5 font-semibold'>Projects</h1>
                 <p className='mb-2 lg:mb-5'>Some of the projects that I have worked on can be found here. Unless otherwise noted all of my work has been built with React, Next.js, and Tailwind CSS.</p>
             </section>
-            <section className='md:mt-12 grid md:grid-cols-2 2xl:grid-cols-3 md:gap-x-3 lg:gap-x-10 gap-y-10'>
+            <section className='md:mt-12 grid lg:grid-cols-2 2xl:grid-cols-3 lg:gap-x-10 gap-y-10'>
                 {projectComponents} 
             </section>
         </main>
