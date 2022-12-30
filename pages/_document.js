@@ -6,20 +6,16 @@ export default function Document() {
   return (
     <Html>
       <Head>
-
         {/* The 3 link tags below are for/from Google Fonts for the body text */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-
         {/* The 3 link tags below are for/from Google Fonts for header text (navbar and modal) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet" />
-        
         {/* Favicon */}
         <link rel="icon" href="/images/profile-logo-light.png" /> 
-
       </Head>
       <body>
         <Main />
